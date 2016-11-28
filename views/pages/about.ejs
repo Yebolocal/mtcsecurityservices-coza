@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %> - <%= siteName %></title>
+        <meta name="description" content="<%= description %>">
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="<%= description %>"/>
+        <meta property="og:url:" content="http://localhost/"/>
+        <meta property="og:image" content="/images/logo.png"/>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <% include ../partials/header %>
+
+        <section class="section" id="content-section">
+
+            <span class="page-title-big">
+                <%= title %>
+            </span>
+
+            <div class="row">
+
+                <div id="content-sidebar-page">
+
+
+                    <% for(var i=0; i<highlight.length; i++) { %>
+                        <div class="sidebar-item-page">
+                            <p><%= highlight[i] %></p>
+                        </div>
+                    <% } %>
+
+
+
+                </div>
+
+                <div id="content-main-page">
+                    <div class="content-section-inner">
+
+                        <h3>COMPANY OVERVIEW</h3>
+
+                        <p>MTC Security Services is a high profile and professional security company providing protection services to clients.  Established in 2008, our unique approach to the Security Industry is cemented by rendering a very high standard of personalised service to all our clients.</p>
+                        <p>Our success is based on the quality of our personnel, equipment and the exceptionally high service standards we set for ourselves. By limiting our client base, we are able to achieve these high goals and ensure not only service excellence, but total client satisfaction and safety.</p>
+                        <p>It is our aim to build an “Esprit de Corps” amongst our employees that will make them proud of their profession and with their assistance and commitment to set standards in the industry that others strive to duplicate.</p>
+                        <p>Our philosophy is to work progressively towards employee involvement and participation in decisions that affect them.  This in turn allows them to exhibit greater individual responsibility, at all levels, towards the attainment of organisational goals.</p>
+                        <p>MTC offers a wide range of security solutions to corporate and industrial businesses as well as the private sector. In collaboration with the SAPS, MTC K9 Unit is also regularly involved with operations against drug and unlawful firearms within Pretoria East.</p>
+                        <p>A unique integration of extensive experience and specialisation, guarantees the client the most comprehensive security services.</p>
+                        <p>MTC introduced a corporate philosophy of level management and ownership, as its relationship with all stakeholders is paramount.  This relationship helps maintain and develop a culture that focuses on the needs of the client, together with providing exceptional products and services. </p>
+
+                        <h3>SERVICES OFFERED</h3>
+
+                        <p>MTC Security Services offers a wide range of highly specialised security services to the commercial, industrial and estates industries. Furthermore, the Company’s personnel are trained based on an in-depth site analysis and client requirements specific to the property in order contribute strongly in maintaining the client image at all times. </p>
+
+                        <p>All security officers are placed as per client instructions, along with their respective duties and tertiary services.  Whether patrolling, providing access control or acting as information security officers, all such personnel are groomed to accept their role as representatives of the client</p>
+                        <p>First impressions are important and all MTC staff is trained to take pride in their appearance and actions.</p>
+
+                        <p>The client can be assured that all MTC security officers will perform their role with corporate identity, pride and specific needs in mind, acting at all times as ambassadors to the stakeholder.</p>
+                        <h4>K9 UNIT</h4>
+                        <p>We have recently started a highly skilled K9 Unit with well trained Patrol and Tracker dogs and handlers, as well as substance units. </p>
+
+                        <h4>FIREARM TRAINING</h4>
+                        <p>We have also recently accredited Valkyrie Firearm Training with the SAPS and SAPFTC to provide  Training for Proficiency for your Competency for Handgun, Rifle, Shotgun & Semi Auto
+                            as well as Business Purposes and Muzzle Loaders.
+                        </p>
+                        <h4>SECTION 21</h4>
+                        <p>We also Provide Section 21 for Businesses.</p>
+
+
+                        <h3>RECRUITMENT AND SELECTION PROCESS</h3>
+                        <ul>
+                            <li>SIRA certification and up to date registration</li>
+                            <li>Testing of PSIRA standards</li>
+                            <li>Must have good communication skills</li>
+                        </ul>
+
+                        <h3>QUALITY MANAGEMENT</h3>
+                        <ul>
+                            <li>Monthly client liaison</li>
+                            <li>Internal audit on procedures and policies</li>
+                            <li>Specific job descriptions</li>
+                            <li>Refresher training</li>
+                            <li>Weekly and Monthly meetings</li>
+                            <li>Selection of suitable manpower</li>
+                            <li>Supervised site visits, day and night</li>
+                            <li>Management availability 24-hours / 7 days a week</li>
+                            <li>Uniform and equipment inspections</li>
+                        </ul>
+
+                        <h3>GUARD MOTIVATION</h3>
+                            <p>We at MTC believe that the Security Officers are the most important key in the Company, as they are our ambassadors. Our focus is thus on taking care of our Security Officers to the best of our ability. </p>
+                            <p>We at MTC believe that the Security Officers are the most important key in the Company, as they are our ambassadors. Our focus is thus on taking care of our Security Officers to the best of our ability. </p>
+
+                        <h3>GUARDING EQUIPMENT</h3>
+
+                        <p>We believe that a security officer can only perform at his best when equipped properly.  All our security officers are equipped as follows:</p>
+
+                        <p>Grade D Officer (Unarmed)</p>
+                        <ul>
+                            <li>Pepper Spray</li>
+                            <li>Baton</li>
+                            <li>Hand Cuffs</li>
+                            <li>Cell phone</li>
+                            <li>Pocket Book</li>
+                            <li>Panic Button connected to IMC Reaction (except in once-
+                                off assistance)</li>
+                            <li>Torch (when night shifts are applicable)</li>
+                            <li>Paintball guns supplied on request at an extra cost</li>
+
+                        </ul>
+
+
+                        <h3>REFERENCES</h3>
+
+                            <ul>
+
+                                <% for (i = 0; i < data.references.length; i++) { %>
+                                <li>
+                                    <%= data.references[i].name %>
+                                </li>
+                                <% } %>
+
+
+                            </ul>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="contact-bottom">
+                <span class="btn-contact">
+                    <i class="fa fa-comment-o"></i>
+                    <a href="/contact-us"> Contact Us</a>
+                </span>
+                <div class="row">
+                    <div class="contact-bottom-contact-info">
+                        <div>
+                        <p>Brett Louw</p>
+                        <p>072 709 4682</p>
+                        <p>brett@mtcsecurityservices.co.za</p>
+                        </div>
+                    </div>
+                    <div class="contact-bottom-contact-info">
+                        <div>
+                        <p>Johan Groenewald</p>
+                        <p>076 866 4496</p>
+                        <p>johan@mtcsecurityservices.co.za</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <% include ../sections/services%>
+
+        <% include ../partials/footer %>
+
+        <script src="/js/main.js"> </script>
+
+    </body>
+</html>

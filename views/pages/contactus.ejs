@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %> - <%= siteName %></title>
+        <meta name="description" content="<%= description %>">
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="<%= description %>"/>
+        <meta property="og:url:" content="http://localhost/"/>
+        <meta property="og:image" content="/images/logo.png"/>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <% include ../partials/header %>
+        <section class="section" id="content-section">
+
+            <span class="page-title-big">
+                <i class="fa fa-comment-o"></i>
+                <%= title %>
+            </span>
+
+
+            <div id="content-sidebar">
+                <span class="btn-contact">
+                    <p> Marketing</p>
+                </span>
+                <div class="content-sidebar-contact-info">
+                    <p>Brett Louw</p>
+                    <p>072 709 4682</p>
+                    <p>brett@mtcsecurityservices.co.za</p>
+                </div>
+                <span class="btn-contact">
+                    <p>Operations</p>
+                </span>
+                <div class="content-sidebar-contact-info">
+                    <p>Johan Groenewald</p>
+                    <p>076 866 4496</p>
+                    <p>johan@mtcsecurityservices.co.za</p>
+                </div>
+            </div>
+
+            <div id="content-main">
+                <div class="content-section-inner">
+
+
+
+                    <%= title %>
+                    <%= description %>
+                </div>
+            </div>
+        </section>
+
+
+        <% include ../sections/services%>
+
+        <% include ../partials/footer %>
+
+        <script src="/js/main.js"> </script>
+
+    </body>
+</html>

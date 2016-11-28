@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %> - <%= siteName %></title>
+    <meta name="description" content="<%= description %>">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="<%= description %>"/>
+    <meta property="og:url:" content="http://localhost/"/>
+    <meta property="og:image" content="/images/logo.png"/>
+    <% include ../partials/head %>
+</head>
+<body>
+<% include ../partials/header %>
+
+<section class="section" id="content-section">
+
+            <span class="page-title-big">
+                <%= title %>
+            </span>
+
+    <div class="row">
+
+        <div id="content-sidebar-page">
+
+
+            <% for(var i=0; i<highlight.length; i++) { %>
+            <div class="sidebar-item-page">
+                <p><%= highlight[i] %></p>
+            </div>
+            <% } %>
+
+
+
+        </div>
+
+        <div id="content-main-page">
+            <div class="content-section-inner">
+
+                <img src="/img/guard-2.png" alt="guard-1"/>
+
+                <p>MTC Security Services offers a wide range of highly specialised security services to the commercial, industrial and estates industries. Furthermore, the Company’s personnel are trained based on an in-depth site analysis and client requirements specific to the property in order contribute strongly in maintaining the client image at all times. </p>
+                <p>All security officers are placed as per client instructions, along with their respective duties and tertiary services.  Whether patrolling, providing access control or acting as information security officers, all such personnel are groomed to accept their role as representatives of the client</p>
+                <p>First impressions are important and all MTC staff is trained to take pride in their appearance and actions</p>
+                <p>The client can be assured that all MTC security officers will perform their role with corporate identity, pride and specific needs in mind, acting at all times as ambassadors to the stakeholder.</p>
+
+                <img src="/img/guard-1.png" alt="guard-1"/>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row">
+
+        <% for(var i=0; i<photos.length; i++) { %>
+        <div class="page-image">
+            <div class="page-image-inner">
+                <img class="resposive-image" src="/img/<%= photos[i] %>.png" alt="Image1">
+            </div>
+        </div>
+        <% } %>
+
+    </div>
+
+
+    <div id="contact-bottom">
+                <span class="btn-contact">
+                    <i class="fa fa-comment-o"></i>
+                    <a href="/contact-us"> Contact Us</a>
+                </span>
+        <div class="row">
+            <div class="contact-bottom-contact-info">
+                <div>
+                    <p>Brett Louw</p>
+                    <p>072 709 4682</p>
+                    <p>brett@mtcsecurityservices.co.za</p>
+                </div>
+            </div>
+            <div class="contact-bottom-contact-info">
+                <div>
+                    <p>Johan Groenewald</p>
+                    <p>076 866 4496</p>
+                    <p>johan@mtcsecurityservices.co.za</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<% include ../sections/services%>
+
+<% include ../partials/footer %>
+
+<script src="/js/main.js"> </script>
+
+</body>
+</html>

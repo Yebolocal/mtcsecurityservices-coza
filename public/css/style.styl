@@ -1,0 +1,489 @@
+@import 'nib'
+@import 'jeet'
+@import 'rupture'
+
+// Set the Breakpoints
+bp = 960px
+
+// Set the Colors
+grey = #505050
+grey-light = #9db2b8
+red = #B81B20
+yellow = #FFE01A
+pink = #ed2a7a
+purple = #662c91
+
+// Set the fonts later use // font-family font1
+
+font1 = 'Jura', sans-serif;
+font2 = 'Cinzel', serif;
+
+// The global styles
+
+html
+ font-size: 1.6em
+ color: grey
+ font-family font1
+
+body
+  background: black
+  padding 0px
+  margin 0px
+a
+  color: #00B7FF
+
+a:hover
+color purple
+
+
+.f1
+    font-family font1
+.f2
+    font-family font2
+.f3
+    font-family font3
+
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Layout Tools  */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+
+// the container is used to center the content on the page. If you dont want the content to be centered dont use a container
+.container
+  center(bp)
+
+// Use rows to wrap around columns and spans
+.row
+  width 100%
+  cf()
+
+// Use col inners if you want to add padding, margins and borders to columns and span without breaking the proportions
+
+col-inner {
+    padding 10px
+    border-radius: 1px
+}
+
+
+// Section to group the content of the page
+
+.section
+    padding-top 100px
+    padding-bottom 100px
+
+// Buttons
+
+.btn
+  padding-top 15px
+  padding-bottom 15px
+  padding-left 30px
+  padding-right 30px
+  // background white
+  border-radius: 10px
+  font-size 2em
+  width 30%
+  a
+      text-decoration none
+      color white
+  a:hover
+      color purple
+
+.square-list
+  list-style-type: square;
+
+.resposive-image
+  max-width 100%
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Sample code */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+/*
+
+   border-radius: 170px !important
+
+   box-shadow: 5px 5px 5px black
+
+   text-shadow: 2px 2px 4px #000000;
+
+  Collumns, spans, breakpoints and stack() = add them to your classes and id as needed
+
+  span(1/4 4/8)
+
+  col(1/2,cycle: 2)
+
+  +below(bp)
+    stack()
+
+*/
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Header Section */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+#header-section
+    padding 0px
+    margin 0px
+    background yellow
+    background-image url('/img/header-bottom.jpg')
+    background-position bottom
+    background-repeat repeat-x
+
+#header-section-inner
+    min-height 200px
+
+#nav-wrapper
+    padding 0px
+    margin 0px
+    span(3/4)
+    +below(bp)
+      stack()
+
+#logo-wrapper
+    span(1/4)
+    +below(bp)
+      stack()
+
+#logo-header
+    z-index: 1;
+    overflow visible
+    position: fixed;
+    left: 85%;
+    img
+        height 200px
+
+#logo-header-text
+    margin-right 20%
+    margin-left 60%
+    padding-top 10px
+    padding-bottom 10px
+    padding-left 70px
+    padding-right 10px
+    background grey
+    border-color black
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px
+    font-size 1em
+    +below(bp)
+        margin-right auto
+        margin-left auto
+    a
+      text-decoration none
+      color yellow
+    a:hover
+      color red
+
+
+#header-nav
+    background #505050
+    height 45px
+    margin-bottom 20px
+    ul
+        margin 0px
+        padding 0px
+        list-style-type: none;
+        margin-bottom 0px
+
+.nav-item
+    span(1/4 3/4)
+    +below(400px)
+      stack()
+      background yellow
+      border solid #505050
+      background-image none
+
+    position relative
+    height 45px
+    padding-bottom 15px !important
+    text-align center
+    background-image url('/img/nav-bottom.jpg')
+    background-position bottom
+    background-repeat repeat-x
+    a
+        text-decoration none
+        height 45px
+        border-left 1px solid grey-light
+        padding-top 11px
+        span(1/1)
+        font-size 0.8em
+        color white
+        font-family font1
+        +below(400px)
+            color black
+
+.nav-item:hover
+    background white
+    a
+        color black
+
+
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Hero Section */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* content-section */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+#content-section
+    background-image url('/img/main-back2.jpg')
+    background-position top center
+    background-repeat no-repeat
+    background-attachment: fixed;
+    min-height 700px
+    color: black
+    font-family font1
+    .container
+        border-radius: 30px
+        background rgba(255, 255, 255, 0.8)
+
+
+.content-section-inner
+    margin 30px
+    font-size 0.8em
+
+#content-sidebar
+    col(3/6)
+    +below(bp)
+        stack()
+
+
+
+.content-sidebar-contact-info
+    margin-left 50px
+    margin-right 50px
+    border-radius: 10px
+    background rgba(0, 0, 0, 0.8)
+    p
+        padding 5px
+        color white
+        text-align right
+        +below(bp)
+            font-size 0.6em
+            text-align center
+
+
+
+#content-main
+    col(3/6)
+    +below(bp)
+        stack()
+    border-radius: 30px
+    background rgba(255, 255, 255, 0.8)
+
+
+.btn-contact
+    padding-top 15px
+    padding-bottom 15px
+    padding-left 30px
+    padding-right 30px
+    border-radius: 10px
+    background red
+    border-style solid
+    border-color grey
+    font-size 1.1em
+    // width 30%
+    center(200px)
+    text-align center
+    a
+        text-decoration none
+        color white
+    a:hover
+      color purple
+
+.btn-contact:hover
+    background black
+    a
+        color white
+
+
+.btn-about
+    padding-top 15px
+    padding-bottom 15px
+    padding-left 30px
+    padding-right 30px
+    border-radius: 10px
+    background red
+    border-style solid
+    border-color grey
+    font-size 1.1em
+    // width 30%
+    center(400px)
+    text-align center
+    a
+        text-decoration none
+        color white
+    a:hover
+        color purple
+
+.btn-about:hover
+    background black
+    a
+        color white
+
+
+
+
+.home-image
+    col(1/3,cycle: 3)
+    +below(bp)
+        stack()
+
+.home-image-inner
+    margin 40px
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* services-section */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+#services-section
+    background-color white
+    background-image url('/img/services-back.jpg')
+    background-position bottom center
+    background-repeat no-repeat
+    background-attachment: relative;
+    min-height 300px
+
+.sevices-text
+    col(1/2,cycle: 2)
+    +below(bp)
+        stack()
+
+.services-text-inner
+    margin-top 40px
+    margin-left 20%
+    margin-right 20%
+    +below(bp)
+        stack()
+        margin-right auto
+        margin-left auto
+    a
+        padding-top 10px
+        padding-bottom 10px
+        padding-left 70px
+        padding-right 10px
+        background yellow
+        border-color black
+        border-style: solid;
+        border-width: 5px;
+        border-radius: 10px
+        font-size 0.8em
+        text-decoration none
+        color black
+        +below(400px)
+            stack()
+            font-size 0.6em
+            padding-top 5px
+            padding-bottom 5px
+            padding-left 5px
+            padding-right 5px
+    a:hover
+        background white
+        color red
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* page Section */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+
+.contact-bottom-contact-info
+    col(1/2)
+    +below(bp)
+        stack()
+    text-align center
+    div
+        background rgba(255, 255, 255, 0.8)
+        margin 50px
+        border-radius: 10px
+
+.page-title-big
+    padding-top 15px
+    padding-bottom 15px
+    padding-left 30px
+    padding-right 30px
+    border-radius: 10px
+    margin-bottom 70px
+    background red
+    border-style solid
+    border-color grey
+    font-size 2em
+    center(800px)
+    text-align center
+    color white
+    a
+        text-decoration none
+        color white
+    a:hover
+      color purple
+
+#content-main-page
+    col(4/6)
+    +below(bp)
+        stack()
+    border-radius: 30px
+    background rgba(255, 255, 255, 0.8)
+
+#content-sidebar-page
+    col(2/6)
+    +below(bp)
+        stack()
+
+
+.sidebar-item-page
+    margin-left 50px
+    margin-right 50px
+    margin-bottom 20px
+    padding 5px
+    border-radius: 10px
+    background rgba(0, 0, 0, 0.8)
+    p
+      padding 5px
+      color white
+      text-align right
+      +below(bp)
+          font-size 0.6em
+          text-align center
+
+
+.page-image
+    col(1/2,cycle: 2)
+    +below(bp)
+        stack()
+
+.page-image-inner
+    margin 40px
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Footer Section */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+#footer-section
+    background-color red
+    background-image url('/img/footer-back.jpg')
+    background-position top center
+    background-repeat repeat-x
+    background-attachment: relative;
+    min-height 30px

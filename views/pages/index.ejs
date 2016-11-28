@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %> - <%= siteName %></title>
+        <meta name="description" content="<%= description %>">
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="<%= description %>"/>
+        <meta property="og:url:" content="http://localhost/"/>
+        <meta property="og:image" content="/images/logo.png"/>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <% include ../partials/header %>
+        <section class="section" id="content-section">
+
+            <div class="row">
+            <div id="content-sidebar">
+                <span class="btn-contact">
+                    <i class="fa fa-comment-o"></i>
+                    <a href="/contact-us"> Contact Us</a>
+                </span>
+                <div class="content-sidebar-contact-info">
+                    <p>Brett Louw</p>
+                    <p>072 709 4682</p>
+                    <p>brett@mtcsecurityservices.co.za</p>
+                </div>
+                <div class="content-sidebar-contact-info">
+                    <p>Johan Groenewald</p>
+                    <p>076 866 4496</p>
+                    <p>johan@mtcsecurityservices.co.za</p>
+                </div>
+            </div>
+
+            <div id="content-main">
+                <div class="content-section-inner">
+                    <%= title %>
+                    <p> MTC Security Services is a high profile and professional security company providing                          protection services to clients.  Established in 2008, our unique approach to the                             Security Industry is cemented by rendering a very high standard of personalised                              service to all our clients
+                    </p>
+                    <p>We offer a wide range of highly specialised security services to the commercial, industrial and estates industries. Furthermore, the Company’s personnel are trained based on an in-depth site analysis and client requirements specific to the property in order contribute strongly in maintaining the client image at all times. </p>
+                    <span class="btn-about">
+                        <i class="fa fa-info-circle"></i>
+                        <a href="/about-us"> Read More About Us</a>
+                    </span>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="row">
+                <div class="home-image">
+                    <div class="home-image-inner">
+                    <img class="resposive-image" src="/img/image1.png" alt="Image1">
+                    </div>
+                </div>
+                <div class="home-image">
+                    <div class="home-image-inner">
+                    <img class="resposive-image" src="/img/image10.png" alt="Image1">
+                    </div>
+                </div>
+                <div class="home-image">
+                    <div class="home-image-inner">
+                    <img class="resposive-image" src="/img/image8.png" alt="Image1">
+                    </div>
+                </div>
+                <div class="home-image">
+                    <div class="home-image-inner">
+                    <img class="resposive-image" src="/img/image4.png" alt="Image1">
+                    </div>
+                </div>
+                <div class="home-image">
+                    <div class="home-image-inner">
+                    <img class="resposive-image" src="/img/image6.png" alt="Image1">
+                    </div>
+                </div>
+                <div class="home-image">
+                    <div class="home-image-inner">
+                    <img class="resposive-image" src="/img/image2.png" alt="Image1">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div id="here" style="background: red">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis dignissim lacus. Aliquam erat volutpat. Nam auctor porttitor facilisis. Ut venenatis, est ut mollis porttitor, dolor tortor laoreet nisi, nec gravida libero lorem in sapien. Aenean sagittis pharetra risus, ut mollis urna placerat a. Sed molestie bibendum quam, at faucibus ipsum interdum non. Nulla quis turpis turpis, ac tempus magna. Pellentesque eget leo arcu, pellentesque posuere ipsum. Aliquam consectetur, odio sit amet rhoncus ultrices, dolor nunc pretium urna, in egestas velit diam vel urna. Proin a nibh eu tellus tincidunt bibendum. Nunc ullamcorper pharetra mauris, ac porta neque vulputate sed.
+
+                Vestibulum ullamcorper feugiat erat quis aliquam. Aliquam ligula enim, facilisis malesuada suscipit eget, sagittis porttitor magna. Nam ullamcorper, quam nec imperdiet mollis, elit mi pretium leo, sed condimentum odio tortor vitae lorem. Nam interdum congue luctus. Vestibulum elit orci, posuere in rutrum vitae, mollis vel lectus. Phasellus sed velit vel nulla tempus hendrerit. Quisque ultrices, sapien vel dictum consectetur, lacus tellus blandit ante, non iaculis neque purus in nunc. Nullam accumsan risus turpis. Donec dapibus, augue a blandit blandit, tellus ligula blandit urna, consequat tincidunt diam sem vitae felis. Cras bibendum interdum leo in condimentum. Sed pulvinar odio sit amet nisi porttitor sollicitudin. Curabitur tortor metus, facilisis at viverra in, fermentum sit amet orci. Pellentesque adipiscing, mauris ac fringilla auctor, ligula nisl placerat dolor, a sagittis sapien sem quis enim. Etiam sed tellus magna. Nunc nisi metus, molestie non lacinia et, sollicitudin sed libero.
+            </p>
+        </div>
+        <%  console.log(data.references[1].name) %>
+
+        <script>
+
+
+            var s =['1', '2', '3'];
+
+            var x = document.getElementById('here');
+
+            function display(i){
+                if(i >= s.length){
+                    i = 0;
+                }
+
+                x.innerHTML = s[i];
+                setTimeout(function(){
+                    display(i + 1)
+                }, 2000)
+            }
+
+            display(0)
+
+
+        </script>
+
+
+        <% include ../sections/services%>
+
+        <% include ../partials/footer %>
+
+        <script src="/js/main.js"> </script>
+
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %> - <%= siteName %></title>
+        <meta name="description" content="<%= description %>">
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="<%= description %>"/>
+        <meta property="og:url:" content="http://localhost/"/>
+        <meta property="og:image" content="/images/logo.png"/>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <% include ../partials/header %>
+
+        <section class="section" id="content-section">
+
+            <span class="page-title-big">
+                <%= title %>
+            </span>
+
+            <div class="row">
+
+                <div id="content-sidebar-page">
+
+
+                    <% for(var i=0; i<highlight.length; i++) { %>
+                        <div class="sidebar-item-page">
+                            <p><%= highlight[i] %></p>
+                        </div>
+                    <% } %>
+
+
+
+                </div>
+
+                <div id="content-main-page">
+                    <div class="content-section-inner">
+
+                        <%= description %>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+
+                <% for(var i=0; i<photos.length; i++) { %>
+                    <div class="page-image">
+                        <div class="page-image-inner">
+                        <img class="resposive-image" src="/img/<%= photos[i] %>.png" alt="Image1">
+                        </div>
+                    </div>
+                <% } %>
+
+            </div>
+
+
+            <div id="contact-bottom">
+                <span class="btn-contact">
+                    <i class="fa fa-comment-o"></i>
+                    <a href="/contact-us"> Contact Us</a>
+                </span>
+                <div class="row">
+                    <div class="contact-bottom-contact-info">
+                        <div>
+                        <p>Brett Louw</p>
+                        <p>072 709 4682</p>
+                        <p>brett@mtcsecurityservices.co.za</p>
+                        </div>
+                    </div>
+                    <div class="contact-bottom-contact-info">
+                        <div>
+                        <p>Johan Groenewald</p>
+                        <p>076 866 4496</p>
+                        <p>johan@mtcsecurityservices.co.za</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <% include ../sections/services%>
+
+        <% include ../partials/footer %>
+
+        <script src="/js/main.js"> </script>
+
+    </body>
+</html>
